@@ -12,7 +12,7 @@ namespace angular_asp.net_core_bootcamp.model
         public db_connection(DbContextOptions<db_connection> options) : base(options) { }
 
         //product table
-        public virtual DbSet<product> tbl_product_master { get; set; }
+        public virtual DbSet<product> product { get; set; }
 
     }
 }

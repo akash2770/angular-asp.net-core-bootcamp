@@ -12,6 +12,7 @@ namespace angular_asp.net_core_bootcamp.Controllers
     public class productController : ControllerBase
     {
         private readonly db_connection con;
+
         public productController(db_connection con)
         {
             this.con = con;
@@ -20,7 +21,7 @@ namespace angular_asp.net_core_bootcamp.Controllers
         [HttpGet]
         public IActionResult list()
         {
-            var product = con.tbl_product_master.ToList();
+            var product = con.product.ToList();
             return Ok(product);
         }
 
