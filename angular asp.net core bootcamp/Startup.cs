@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.EntityFrameworkCore;
+using angular_asp.net_core_bootcamp.model;
 
 namespace angular_asp.net_core_bootcamp
 {
@@ -26,6 +28,9 @@ namespace angular_asp.net_core_bootcamp
             {
                 configuration.RootPath = "ClientApp/dist";
             });
+
+            //database connection //this con is hear || appsettings.Development.json
+            services.AddDbContext<db_connection>(options => options.UseSqlServer(Configuration["db_con"]));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
