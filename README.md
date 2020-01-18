@@ -1,8 +1,10 @@
 # angular-asp.net-core-bootcamp
+# asp net with angular complete tutorial project
+#asp net with angular database connection
 
 
-//api url 
 
+//All API URL
 //Product List
 https://localhost:44352/api/product/list
 
