@@ -18,11 +18,12 @@ namespace angular_asp.net_core_bootcamp.Controllers
             this.con = con;
         }
 
+
         [HttpGet]
         public IActionResult list()
         {
-            var product = con.tbl_product_master.ToList();
-            return Ok(product);
+            var p_list = con.tbl_product_master.ToList();
+            return Ok(p_list);
         }
 
     }
