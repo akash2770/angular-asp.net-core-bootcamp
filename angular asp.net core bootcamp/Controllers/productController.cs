@@ -27,6 +27,13 @@ namespace angular_asp.net_core_bootcamp.Controllers
         }
 
 
+        [HttpGet("{id}")]
+        public IActionResult view(int id)
+        {
+            var p_view = con.tbl_product_master.FirstOrDefault(x => x.id == id);
+            return Ok(p_view);
+        }
+
 
     }
 }
