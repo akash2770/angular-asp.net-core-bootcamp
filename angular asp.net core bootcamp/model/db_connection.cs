@@ -2,16 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace angular_asp.net_core_bootcamp.model
 {
-    public class db_connection
+    public class db_connection : DbContext
     {
 
-        public db_connection()
-        {
-
-        }
+        public db_connection(DbContextOptions<db_connection> options) : base(options) { }
 
     }
 }
