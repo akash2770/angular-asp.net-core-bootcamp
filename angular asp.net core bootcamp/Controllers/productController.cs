@@ -57,7 +57,7 @@ namespace angular_asp.net_core_bootcamp.Controllers
         {
             con.tbl_product_master.Remove(new product { id = id });
             con.SaveChanges();
-            return Ok();
+            return Ok("Deleted");
         }
 
     }
