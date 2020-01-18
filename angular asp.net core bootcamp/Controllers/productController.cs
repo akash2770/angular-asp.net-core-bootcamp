@@ -21,7 +21,7 @@ namespace angular_asp.net_core_bootcamp.Controllers
         [HttpGet]
         public IActionResult list()
         {
-            var product = con.product.ToList();
+            var product = con.tbl_product_master.ToList();
             return Ok(product);
         }
 
