@@ -22,9 +22,11 @@ namespace angular_asp.net_core_bootcamp.Controllers
         [HttpGet]
         public IActionResult list()
         {
-            var p_list = con.tbl_product_master.ToList();
+            var p_list = con.tbl_product_master.OrderByDescending(x => x.id); 
             return Ok(p_list);
         }
+
+
 
     }
 }
