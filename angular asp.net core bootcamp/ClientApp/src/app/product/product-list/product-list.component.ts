@@ -11,12 +11,13 @@ export class ProductListComponent implements OnInit {
 
   public api_url = "https://localhost:44352/api/product/list";
 
-  private model:Product = new Product;
+  private model: Product = new Product;
+  private products: Product[];
 
   constructor(private productService:ProductService) { 
-    this.productService.get_product(this.api_url).subscribe(
-      data => {
-        console.log(data);
+    this.productService.get_product().subscribe(
+      res => {
+        this.products = res;
       }
     );
   }
