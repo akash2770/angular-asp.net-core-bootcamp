@@ -2,6 +2,13 @@
     Add Product
 </a>
 
-<p *ngFor="let p of products">
-  {{p.title}}
+<p >
+  
 </p>
+
+<ul class="list-group">
+  <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let prod of products">
+    {{prod.title}}
+    <span class="badge badge-primary badge-pill">{{prod.qty}}</span>
+  </li>
+</ul>
