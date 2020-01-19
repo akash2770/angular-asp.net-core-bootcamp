@@ -12,7 +12,7 @@ const appRoutes:Routes = [
     { path: 'fetch-data', component: FetchDataComponent },
     { path: 'product', component: ProductListComponent},
     { path: 'product/add', component: ProductComponent },
-    { path: 'product/:id', component: ProductComponent },
+    { path: 'product/add/:id', component: ProductComponent },
 ]
 
 @NgModule({

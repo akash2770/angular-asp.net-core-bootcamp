@@ -5,10 +5,10 @@
     <ul class="list-group mt-2 mb-5">
       <li class="list-group-item " *ngFor="let prod of products">
         {{prod.title}}
+        <span class="badge badge-primary badge-pill">{{prod.qty}}</span>
+
         <span style="cursor:pointer" class="ml-1 badge badge-danger badge-pill float-right" (click)="deleteProduct(prod.id)">Delete</span>
-
-        <span class="badge badge-primary badge-pill float-right">{{prod.qty}}</span>
-
+        <span style="cursor:pointer" class="ml-1 badge badge-success badge-pill float-right" (click)="updateProduct(prod.id)">Update</span>
       </li>
     </ul>
   </div>
