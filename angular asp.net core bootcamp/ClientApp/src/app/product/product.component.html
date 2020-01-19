@@ -1,7 +1,8 @@
 <div class="row">
   <div class="col-md-6">
 
-    <form #productAdd="ngForm" (ngSubmit)="addProduct();">
+    <form #productAdd="ngForm" (ngSubmit)="productSubmit();">
+      <input type="text" class="form-control" placeholder="id" name="id" [(ngModel)]="product.id" *ngIf="check_add_update" required>
       <div class="form-group">
         <label>Title</label>
         <input type="text" class="form-control" placeholder="Enter product title" name="title" [(ngModel)]="product.title" required>
@@ -12,6 +13,5 @@
       </div>
       <button type="submit" [disabled]="!productAdd.valid" class="btn btn-primary">Add</button>
     </form>
-
   </div>
 </div>
