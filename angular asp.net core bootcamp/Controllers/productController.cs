@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace angular_asp.net_core_bootcamp.Controllers
 {
-    [Route("api/[controller]/[action]")]
+    [Route("api/[controller]/[action]")] //19-01-2020
     [ApiController]
     public class productController : ControllerBase
     {
