@@ -1,14 +1,15 @@
-<a class="btn btn-primary" [routerLink]="['/product/add']">
-    Add Product
-</a>
+<a class="btn btn-primary mb-2" [routerLink]="['/product/add']">Add Product</a>
 
-<p >
-  
-</p>
+<div class="row">
+  <div class="col-md-6">
+    <ul class="list-group mt-2 mb-5">
+      <li class="list-group-item " *ngFor="let prod of products">
+        {{prod.title}}
+        <span style="cursor:pointer" class="ml-1 badge badge-danger badge-pill float-right" (click)="deleteProduct(prod.id)">Delete</span>
 
-<ul class="list-group">
-  <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let prod of products">
-    {{prod.title}}
-    <span class="badge badge-primary badge-pill">{{prod.qty}}</span>
-  </li>
-</ul>
+        <span class="badge badge-primary badge-pill float-right">{{prod.qty}}</span>
+
+      </li>
+    </ul>
+  </div>
+</div>

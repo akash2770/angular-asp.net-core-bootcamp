@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../product.service';
 import { Product } from '../product.model';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-product-list',
@@ -9,20 +10,25 @@ import { Product } from '../product.model';
 })
 export class ProductListComponent implements OnInit {
 
-  public api_url = "https://localhost:44352/api/product/list";
-
-  private model: Product = new Product;
   private products: Product[];
 
-  constructor(private productService:ProductService) { 
+  constructor(private productService: ProductService) {}
+
+  ngOnInit() {
+    this.load_product();
+  }
+
+  load_product() {
     this.productService.get_product().subscribe(
-      res => {
-        this.products = res;
-      }
+      res => { this.products = res; }
     );
   }
 
-  ngOnInit() {
+  deleteProduct(id: number) {
+    this.productService.delete_product(+id).subscribe(res => {
+      this.load_product();
+    });
+    
   }
 
   
