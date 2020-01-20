@@ -11,6 +11,7 @@ import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { ProductComponent } from './product/product.component';
 import { ProductListComponent } from './product/product-list/product-list.component';
 import { AppRouting } from './app-routing.module';
+import { AddProductComponent } from './product/add-product/add-product.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { AppRouting } from './app-routing.module';
     FetchDataComponent,
     ProductListComponent,
     ProductComponent,
+    AddProductComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
